@@ -1,0 +1,17 @@
+Signal Quality/Strength ➜ AT+CSQ;AT+CSQ
+Check current IMEI ➜ AT+CGSN;AT+CGSN
+Check Phone Number ➜ AT+CNUM;AT+CNUM
+Restart Module ➜ AT+CFUN=1,1;AT+CFUN=1,1
+Network Info ➜ AT+QNWINFO;AT+QNWINFO
+Query carrier aggregation parameters ➜ AT+QCAINFO;AT+QCAINFO
+Mode: QMI/RMNET ➜ AT+QCFG="usbnet",0;AT+QCFG="usbnet",0
+Mode: ECM ➜ AT+QCFG="usbnet",1;AT+QCFG="usbnet",1
+Mode: MBIM ➜ AT+QCFG="usbnet",2;AT+QCFG="usbnet",2
+Mode: RNDIS ➜ AT+QCFG="usbnet",3;AT+QCFG="usbnet",3
+Network: 5G SA ➜ AT+QNWPREFCFG="mode_pref",NR5G;AT+QNWPREFCFG="mode_pref",NR5G
+Network: 5G NSA ➜ AT+QNWPREFCFG="mode_pref",NR5G:LTE;AT+QNWPREFCFG="mode_pref",NR5G:LTE
+Network: 4G Only ➜ AT+QNWPREFCFG="mode_pref",LTE;AT+QNWPREFCFG="mode_pref",LTE
+Network: AUTO  ➜ AT+QNWPREFCFG="mode_pref",AUTO;AT+QNWPREFCFG="mode_pref",AUTO
+Change IMEI ➜ AT+EGMR=1,7,"Set IMEI here";AT+EGMR=1,7,"Set IMEI here"
+Lock 4G PCI ➜ AT+QNWLOCK="common/4g",(0-10),<freq>,<pci>;AT+QNWLOCK="common/4g",(0-10),<freq>,<pci>
+Lock 5G PCI ➜ AT+QNWLOCK="common/5g",<pci>,<freq>,<scs>,<band>;AT+QNWLOCK="common/5g",<pci>,<freq>,<scs>,<band>

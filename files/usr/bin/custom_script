@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Source all required modules
+. /usr/lib/custom_script/logger.sh
+. /usr/lib/custom_script/led_control.sh
+. /usr/lib/custom_script/mobile_status.sh
+. /usr/lib/custom_script/internet_status.sh
+. /usr/lib/custom_script/wifi_status.sh
+. /usr/lib/custom_script/signal_led.sh
+
+# Device file for your modem
+DEVICE="/dev/ttyUSB2"
+
+# Main loop
+while true; do
+    handle_mobile_status "$DEVICE"
+    handle_internet_status
+    handle_wifi_status
+    sleep 5
+done
